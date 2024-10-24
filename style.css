@@ -1,0 +1,452 @@
+* {
+    -webkit-box-sizing: border-box;
+    -noz-box-sizing: border-box;
+    box-sizing: border-box;
+   
+}
+#message { /*دي الرساله اللي بتظهر */
+    display: none;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    transition: opacity 0.5s ease; /* تأثير التلاشي */
+}
+html {
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+body::after {
+    content: '';
+    width: 100vw; /* اجعل العرض يغطي نافذة العرض بالكامل */
+    height: 100vh; /* اجعل الطول يغطي نافذة العرض بالكامل */
+    background-color: red; /* لون الخلفية */
+    position: fixed; /* التثبيت */
+    top: 0;
+    left: 0;
+    clip-path: circle(40% at right 70%); /* قص الخلفية بشكل دائري */
+    z-index: -1; /* اجعلها خلف المحتوى بدون تأثير على العناصر */
+}
+
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    /* padding: 15px; */
+    cursor: pointer;
+    display: fixed;
+    text-align: right;
+    margin-right: 20px;
+   
+}
+
+
+
+
+
+/* إخفاء القائمة بشكل مبدئي */
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* اخفاء القائمة بالكامل */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.nav-links li {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin: 10px 0;
+}
+
+.nav-links li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px ;
+    display: block;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.nav-links li a:hover {
+    background-color: whitesmoke;
+    padding-left: 25px;
+}
+
+main {   /*دي بتاعة الصور*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 35px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* إضافة ظل */
+     /* transform: scale(0.95);  */
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 15px;
+    width: 200px; /* يمكنك تغيير العرض حسب الحاجة */
+    text-align: center;
+    transition: transform 0.2s;
+    
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* الأسلوب العام للبريد الإلكتروني */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* العناوين */
+h1 {
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #1a73e8;
+}
+
+h3 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    padding: 0;
+}
+
+/* النصوص */
+p {
+    color: #555555;
+    margin: 0 0 25px;
+    /* margin: 0%; */
+}
+/*الروابط وكلمة للتواصل*/
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-align: center;
+}
+
+/* الأزرار */
+.button {
+    display: inline-block;
+    background-color: #1a73e8;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+li {
+    text-align: right;
+    margin-top: 5px;
+    font-size: 15px;
+    list-style-type: none;
+    padding: 0%;
+    transition: background-color 0.3s, transform 0.3s;
+    
+}
+/*بداية الايميل*/
+#contact-form {
+    background-color: #ffffff; /* لون خلفية النموذج */
+    border-radius: 5px; /* زوايا دائرية */
+    padding: 20px; /* حشوة داخلية */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    max-width: 400px; /* عرض أقصى */
+    margin: 0 auto; /* توسيط النموذج */
+    text-align: center;
+}
+
+#contact-form h2 {
+    text-align: center; /* توسيط العنوان */
+    margin-bottom: 15px; /* مساحة أسفل العنوان */
+}
+
+#contact-form input, 
+#contact-form textarea {
+    width: 95%; /* عرض كامل */
+    padding: 5px; /* حشوة داخلية */
+    margin: 10px ; /* مسافة بين العناصر */
+    border: 1px solid #ccc; /* حدود خفيفة */
+    border-radius: 5px; /* زوايا دائرية */
+    font-size: 18px; /* حجم الخط */
+    text-align: center;
+}
+
+#contact-form textarea {
+    height: 100px; /* ارتفاع محدد للمساحة */
+}
+
+button {
+    background-color: #041120; /* لون الزر */
+    color: white; /* لون الخط */
+    border: none; /* إزالة الحدود */
+    padding: 10px; /* حشوة داخلية */
+    border-radius: 5px; /* زوايا دائرية */
+    cursor: pointer; /* شكل المؤشر عند المرور */
+    transition: background-color 0.3s; /* تأثير عند التغيير */
+    width: 1; /* عرض كامل */
+}
+
+button:hover {
+    background-color: #0056b3; /* لون الزر عند التمرير */
+}
+/*اخر الايميل*/
+
+h4 {
+    text-align: left;
+    margin-top: 5px;
+    font-size: 25px;
+    list-style-type: none;   
+    color: #120e0ef9;
+    cursor: pointer;
+    padding: 20px 10px;
+    margin: 0%;
+}
+
+section {
+text-align: center;
+margin-top: 1px;
+color: #1a73e8;
+font-size: 18px;
+}
+p {
+    text-align: center;
+    font-size: large;
+    margin-top: 0%;
+    padding: 0%;
+}
+
+
+
+.product {
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+/*بداية البحث*/
+#search {
+    width: 100%; /* عرض كامل */
+    max-width: 355px; /* الحد الأقصى للعرض */
+    padding: 10px; /* حشوة داخلية */
+    border: 10px solid #ccc; /* لون الحد */
+    border-radius: 5px; /* زوايا دائرية */
+    font-size: 18px; /* حجم الخط */
+    outline: none; /* إزالة التأشير الافتراضي */
+    transition: border-color 0.3s; /* تأثير التحول */
+    text-align: center;
+    align-items:center; /* محاذاة عموديًا إلى المنتصف */
+    border:hsl(from color h s l);
+    transform: scale(1.2); /* تكبير الأيقونة عند التمرير */
+    justify-items:center ;
+
+}
+
+
+#search::placeholder {
+    color: #999; /* لون نص المكان المخصص */
+    
+}
+
+#search:focus {
+    border-color: #c1d4e9; /* لون الحد عند التركيز */
+    
+}
+/* اخر البحث هنا*/
+
+.social-share {    /*بداية وسائل الاتصال*/
+    display: flex;
+    justify-content: center; /* توسيط العناصر أفقياً */
+    gap: 15px; /* مسافة بين الروابط */
+    margin: 20px 0; /* هامش أعلى وأسفل */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* إضافة ظل */
+
+}
+
+.social-share a {
+    text-decoration: none; /* إزالة الخط السفلي */
+    color: #fff; /* لون النص */
+    background-color: #1084ff; /* لون الزر */
+    padding: 10px 15px; /* حشو حول النص */
+    border-radius: 15px; /* زوايا دائرية */
+    transition: background-color 0.3s; /* تأثير التحول عند المرور بالماوس */
+    cursor: pointer; /* شكل المؤشر عند المرور */
+}
+
+.social-share a:hover {
+    background-color: #1b77d8; /* لون الخلفية عند التمرير */
+    color: #5cb85c; /* تغيير اللون عند التمرير */
+    transform: scale(1.2); /* تكبير الأيقونة عند التمرير */
+    transition: color 0.5s, transform 0.5s; /* تأثير الانتقال */
+    /*نهاية وصائل الاتصال*/
+
+}
+
+
+button {
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 18px; /* حجم الخط للأزرار */
+    text-align: center;
+    align-items: center; /* محاذاة عموديًا إلى المنتصف */
+    
+
+}
+
+button:hover {
+    background-color: #0056b3; /*تغيير اللون عند التمرير*/
+    transform: scale(1.05); /* تكبير الزر عند التمرير */
+    
+}
+
+button:active {
+    background-color: #004085; /* لون الخلفية عند النقر */
+    transform: scale(0.95); /* تصغير الزر */
+}
+/*زر العوده الي اول الصفحه*/
+#back-to-top {
+    position: fixed;
+    bottom: 8px; /* تظل الأيقونة في أسفل الشاشة */
+    left: 50%; /* تجعل الأيقونة في منتصف الشاشة */
+    transform: translateX(-50%); /* لضبط التمركز بالضبط في المنتصف */
+    display: none; /* تظهر فقط عند الوصول للنهاية */
+    z-index: 100; 
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+}
+
+@media (prefers-color-scheme: dark) {
+    #back-to-top {
+        box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1); /* ظل فاتح */
+    }
+
+    #back-to-top i {
+        color: #a09595; /* لون رمادي فاتح للأيقونة */
+    }
+
+    #back-to-top:hover {
+        background-color: #fff; /* خلفية بيضاء عند التمرير في الثيم الداكن */
+    }
+
+    #back-to-top:hover i {
+        color: #ffffff; /* لون أسود للأيقونة عند التمرير في الثيم الداكن */
+    }
+}
+.h6 { /*الخاص ب الرجوع لاعلي */
+    text-align: center;
+    font-size: 15px;
+    margin-top: 15px;
+    margin: 0;
+    background-color: #041120;
+    max-width: 30%;
+    transform: translateX(120%);
+
+}
+.h6 a{
+    color: #0056b3;
+    transform: scale(1.2);
+}
+.h6 a:hover {
+    color: #0056b3;
+    
+}
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+/*copy right*/
+.p-copy{
+    color: #555555;
+    margin: 0 0 25px;
+    margin:0;
+    padding: 0;
+}
+@media ( max-width: 992) {
+    .product {
+        width: calc(30% - 10%);
+    }
+}
+@media (max-width: 768px) {
+    .product {
+        width: calc(80% - 70%);
+    }
+}
+@media (max-width: 480px) {
+    .product {
+        width: 80%;
+    }
+}

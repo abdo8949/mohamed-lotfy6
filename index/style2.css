@@ -1,0 +1,110 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #343a40;
+    background-image: url("image2.jpg");
+    background-attachment: fixed;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+header, footer {   /*دي للتواصل و وشكرا لاتصالكم*/
+    text-align: center;
+    font-size: 2.1em;
+    margin: 25px 0;
+    color: #ffffff;
+    background-color: #007BFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+div {  /*دي لاضغط علي الرقم للاتصال*/
+    font-size: 1.5em;
+    text-align: center;
+    margin: 25px;
+    border-radius: 8px;
+    color: #e9ecef;
+    
+}
+.social-share a {   /*تبع ايكونة الواتس*/
+    text-decoration: none; /* إزالة الخط السفلي */
+    color: #fff; /* لون النص */  
+    padding: 20px 15px; /* حشو حول النص */
+    cursor: pointer; /* شكل المؤشر عند المرور */
+    
+    margin: 0;
+    
+}
+.social-share a:hover {
+    color: green; /* تغيير اللون عند التمرير */
+    transform: scale(1.5); /* تكبير الأيقونة عند التمرير */
+    transition: color 0.6s, transform 0.4s; /* تأثير الانتقال */
+    /*نهاية وصائل الاتصال*/
+    
+}
+
+p { /*دي لاسم الشخص*/
+    text-align: center;
+    font-size: 2.3em;
+    margin: 20px 0;
+    color: rgba(255, 255, 255, 0.699);
+    margin-top: 5%;
+}
+
+.contact { /*مش عارف*/
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a,li {   /*دي تبع ارقام التليفون*/
+    color: #007BFF;
+    text-decoration:none;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+hr { /*دي للخط الفاصل بين الاسمين*/
+    border: 1px solid #f1b1b1;
+    margin: 25px 0;
+}
+aside {
+    text-align: left;
+    color: #007bff;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+aside :hover{
+    background-color: #0056b3; /* لون الخلفية عند التمرير */
+    color: #5cb85c; /* تغيير اللون عند التمرير */
+    transform: scale(1.5); /* تكبير الأيقونة عند التمرير */
+    transition: color 0.6s, transform 0.4s; /* تأثير الان*/
+    border-radius: 5px;
+}
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header, footer {
+        font-size: 1.5em;
+    }
+
+    a {
+        font-size: 1.2em;
+    }
+}
